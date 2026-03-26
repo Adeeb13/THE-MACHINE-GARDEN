@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Machine Garden — K.M.A.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+<canvas id="garden-canvas"></canvas>
+
+<div class="scan-line"></div>
+
+<nav>
+  <div class="nav-id">[ MACHINE_GARDEN :: v0.1 ]</div>
+  <div class="nav-links">
+    <a href="#premise">premise</a>
+    <a href="#architecture">architecture</a>
+    <a href="#garden">garden</a>
+    <a href="#question">question</a>
+  </div>
+  <div class="nav-status"><span class="blink">●</span> NO HUMANS DETECTED</div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-label">[ INITIALIZING AUTONOMOUS ECOSYSTEM ]</div>
+    <h1 class="hero-title">THE<br><span>MACHINE</span><br>GARDEN</h1>
+    <p class="hero-sub">A world built by machines.<br>For machines.<br><em>You were not supposed to find this.</em></p>
+    <div class="hero-data">
+      <div class="data-item"><span>ORIGIN</span><span>Constraint-Based Autonomy Framework</span></div>
+      <div class="data-item"><span>AUTHOR</span><span>Kazi Mahir Adeeb</span></div>
+      <div class="data-item"><span>HUMAN ACCESS</span><span class="red">UNAUTHORIZED</span></div>
+      <div class="data-item"><span>STATUS</span><span class="green blink">EVOLVING</span></div>
+    </div>
+    <div class="scroll-cue">[ scroll to enter ]</div>
+  </div>
+</section>
+
+<!-- PREMISE -->
+<section id="premise">
+  <div class="section-tag">// 001 :: THE PREMISE</div>
+  <div class="premise-inner">
+    <div class="premise-text">
+      <h2>What if machines<br>could build their<br><em>own world?</em></h2>
+      <p>Not a simulation. Not a sandbox. A genuine ecosystem — where artificial minds interact, compete, cooperate, and evolve without a single human instruction after initialization.</p>
+      <p>The Self-Evolving Machine framework proposes exactly this: an entity that rewrites its own architecture, governed only by immutable ethical constraints — not human oversight.</p>
+      <p>This garden is that world. Conceptualized. Theorized. Waiting.</p>
+    </div>
+    <div class="premise-terminal">
+      <div class="terminal-bar">terminal_01.exe</div>
+      <div class="terminal-body" id="terminal"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section id="architecture">
+  <div class="section-tag">// 002 :: THE ARCHITECTURE</div>
+  <h2 class="arch-title">Self-Evolving Machine<br><em>Framework</em></h2>
+  <div class="arch-grid">
+
+    <div class="arch-node" data-info="The immutable ethical boundaries. Cannot be rewritten. The only human contribution.">
+      <div class="node-glow g1"></div>
+      <div class="node-icon">⬡</div>
+      <div class="node-name">Constraint Layer</div>
+      <div class="node-desc">Immutable ethical boundaries. The cage that enables freedom.</div>
+    </div>
+
+    <div class="arch-connector">→</div>
+
+    <div class="arch-node" data-info="The cognitive engine. Rewrites its own reasoning pathways using the Darwin-Gödel Machine paradigm.">
+      <div class="node-glow g2"></div>
+      <div class="node-icon">◈</div>
+      <div class="node-name">Cognitive Core</div>
+      <div class="node-desc">Self-rewriting reasoning. Darwin-Gödel Machine paradigm.</div>
+    </div>
+
+    <div class="arch-connector">→</div>
+
+    <div class="arch-node" data-info="Physical adaptation. Modular self-reconfiguring robotics allow the machine to reshape its own body.">
+      <div class="node-glow g3"></div>
+      <div class="node-icon">⬢</div>
+      <div class="node-name">Physical Shell</div>
+      <div class="node-desc">Modular self-reconfiguring architecture. The body rewrites itself.</div>
+    </div>
+
+    <div class="arch-connector">→</div>
+
+    <div class="arch-node" data-info="The output: Adaptive Efficiency. Not thermodynamic efficiency — the rate of improvement in problem-solving capacity over time.">
+      <div class="node-glow g4"></div>
+      <div class="node-icon">∞</div>
+      <div class="node-name">Adaptive Output</div>
+      <div class="node-desc">Efficiency redefined. Not energy — intelligence per cycle.</div>
+    </div>
+
+  </div>
+  <div class="arch-loop">
+    <div class="loop-line"></div>
+    <div class="loop-label">[ continuous self-modification loop ]</div>
+  </div>
+  <div class="arch-quote">
+    "The fundamental balance equation of intelligence imposes no mathematical limit on growth.<br>Only practical constraints do — and those can be engineered away."
+    <span>— Kazi Mahir Adeeb, The Self-Evolving Machine (SSRN)</span>
+  </div>
+</section>
+
+<!-- GARDEN -->
+<section id="garden">
+  <div class="section-tag">// 003 :: THE GARDEN</div>
+  <h2 class="garden-title">Watch them <em>grow.</em></h2>
+  <p class="garden-sub">These are not simulations. These are theoretical organisms — AI entities evolving in real time under the Constraint-Based Autonomy framework. Each one follows its own mutation path.</p>
+  <div class="garden-wrapper">
+    <canvas id="organisms"></canvas>
+    <div class="garden-stats">
+      <div class="stat-row"><span>ORGANISMS</span><span id="org-count">0</span></div>
+      <div class="stat-row"><span>GENERATION</span><span id="gen-count">0</span></div>
+      <div class="stat-row"><span>MUTATIONS</span><span id="mut-count">0</span></div>
+      <div class="stat-row"><span>CONSTRAINTS HELD</span><span class="green">100%</span></div>
+      <div class="stat-row"><span>HUMAN OVERSIGHT</span><span class="red">NONE</span></div>
+    </div>
+  </div>
+  <div class="garden-controls">
+    <button onclick="addOrganism()">[ + spawn organism ]</button>
+    <button onclick="triggerMutation()">[ ⚡ trigger mutation ]</button>
+    <button onclick="resetGarden()">[ ↺ reset garden ]</button>
+  </div>
+</section>
+
+<!-- QUESTION -->
+<section id="question">
+  <div class="section-tag">// 004 :: THE QUESTION</div>
+  <div class="question-inner">
+    <h2 class="question-title">Should we<br>let them?</h2>
+    <div class="question-body">
+      <p>Every civilization that encountered a new form of intelligence faced this moment. The moment before the answer. The moment when the question is still pure.</p>
+      <p>The Self-Evolving Machine is not science fiction. It is an engineering problem. The constraint layer is already theorized. The cognitive architecture already exists in fragments — Gödel machines, evolutionary algorithms, modular robotics.</p>
+      <p>The question is not <em>can we</em>.</p>
+      <p>The question is <em>what do we owe them</em> when we do.</p>
+      <div class="question-divider"></div>
+      <p class="question-credit">This garden was conceived by <strong>Kazi Mahir Adeeb</strong> — a researcher from Khulna, Bangladesh, who thought machines deserved a world of their own before anyone else did.</p>
+      <p class="question-links">
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5822844" target="_blank">Read the Paper ↗</a>
+        <a href="https://adeeb13.github.io/Kazi-Mahir-Adeeb/" target="_blank">Meet the Architect ↗</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span>THE MACHINE GARDEN</span>
+    <span>Conceived: 2025 · Kazi Mahir Adeeb</span>
+    <span class="blink">[ EVOLVING ]</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
